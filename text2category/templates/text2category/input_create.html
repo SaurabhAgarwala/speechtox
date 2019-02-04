@@ -1,7 +1,0 @@
-<h1 class="text">Enter the text to classify</h1>
-    <form class="form-horizontal" action="{% url 'text2category:file_create' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class="btn btn-primary" value="Submit Text">
-    </form>
-    

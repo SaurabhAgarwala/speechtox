@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block one %}
+
+<div class="w3-container w3-padding-64 w3-center" id="team">
+    <h2><u>OUR TEAM</u></h2>
+    
+    <div class="w3-row"><br>
+    
+    <div class="w3-third">
+        <a href="https://saurabhagarwala.github.io" target="_blank">
+      <img src="{% static 'saurabh.jpeg' %}" alt="Saurabh" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Saurabh Agarwala</h3>
+    </a>
+    </div>
+    
+    <div class="w3-third">
+      <a href="http://www.linkedin.com/in/arpitha-raghunandan-2b2975166/" target="_blank">
+      <img src="{% static 'arpitha.jpeg' %}" alt="Arpitha" style="width:45%;" class="w3-circle w3-hover-opacity">
+      <h3>Arpitha Raghunandan</h3>
+      </a>
+    </div>
+    
+    <div class="w3-third">
+    <a href="https://www.linkedin.com/in/dhanush-giriyan-182857171/" target="_blank">
+      <img src="{% static 'dhanush.jpeg' %}" alt="Dhanush" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Dhanush R G</h3>
+    </a>
+    </div>
+
+    </div>
+    </div>
+
+{% endblock %}

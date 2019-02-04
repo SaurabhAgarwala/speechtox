@@ -1,0 +1,78 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SpeechTox</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body id="myPage">
+        <div class="w3-top">
+                <div class="w3-bar w3-theme-d2 w3-left-align">
+                 <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+                 <a href="{% url 'home' %}#contents" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>About</a>
+                 <a href="{% url 'text2category:file_create' %}#contents" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Text to Category</a>
+                 <a href="{% url 'songcategory:song_categorize' %}#contents" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Song Category</a>
+                 <a href="{% url 'playlistcategorize:playlist_categorize' %}#contents" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Billboard Playlist Categorize</a>
+                 <a href="{% url 'team' %}#team" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Team">Team</a>
+               </div>
+               
+                 <!-- Navbar on small screens -->
+                 <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+                   <a href="{% url 'text2category:file_create' %}" class="w3-bar-item w3-button">Text to Category</a>
+                   <a href="{% url 'songcategory:song_categorize' %}" class="w3-bar-item w3-button">Song Category</a>
+                   <a href="{% url 'playlistcategorize:playlist_categorize' %}" class="w3-bar-item w3-button">Billboard Playlist Categorize</a>
+                   <a href="{% url 'team' %}" class="w3-bar-item w3-button">Team</a>
+                </div>
+        </div>
+               
+               <!-- Image Header -->
+               <div class="w3-display-container w3-animate-opacity">
+                 <img src="{% static "bg.jpg" %}" alt="background" style="width:100%;min-height:350px;max-height:675px;">
+                 <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+                   <a href="{% url 'home' %}"><button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xxxlarge w3-theme w3-hover-teal" title="Go To Homepage">SpeechTox</button></a>
+                 </div>
+               </div>
+        <div class="wrap">
+            {% block one %}
+            {% endblock %}
+        <br>
+        </div>
+        <footer class="w3-container w3-padding-8 w3-theme-d1 w3-center">
+            <h6>Code Available on <u>Github</u>. Deployed on <u>Amazon Web Services</u></h6>
+            <a class="w3-button w3-medium w3-teal" href="javascript:void(0)" title="Github"><i class="fa fa-github"></i></a>&nbsp;<a class="w3-button w3-medium w3-teal" href="javascript:void(0)" title="AWS"><i class="fa fa-amazon"></i></a>
+          
+            <div style="position:relative;bottom:0px;z-index:1;" class="w3-tooltip w3-right">
+              <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+              <i class="fa fa-chevron-circle-up"></i></span></a>
+            </div>
+          </footer>
+        <!-- <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+            <h6 style="display:inline-block">Code Available on <u><b>Github</b></u></h6>
+            <a class="w3-button w3-large w3-teal" style="display:inline-block" href="javascript:void(0)" title="Github"><i class="fa fa-github"></i></a><br>
+            <h6 style="display:inline-block">Deployed on <u><b>Amazon Web Services</b></u></h6>
+            <a class="w3-button w3-large w3-teal" style="display:inline-block" href="javascript:void(0)" title="Github"><i class="fa fa-amazon"></i></a>
+            <div style="position:relative;bottom:10px;z-index:1;" class="w3-tooltip w3-right">
+              <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+              <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+              <i class="fa fa-chevron-circle-up"></i></span></a>
+            </div>
+          </footer> -->
+        <script>
+            function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+            }
+        </script>
+    </body>
+</html>

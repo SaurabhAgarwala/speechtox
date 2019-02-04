@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block one %}
+<p id="contents" style="text-align: center;"><u>The Decent Songs are:</u><br> {{ gl | safe}}</p>
+<p style="text-align: center;"><u>The Toxic Songs are:</u><br> {{ bl | safe}} </p>
+<p style="text-align: center;"><u>The following songs couldn't be reached:</u><br>{{ nl | safe }} </p>
+{% endblock %}
