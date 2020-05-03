@@ -5,12 +5,12 @@
 <div class="w3-row-padding w3-center w3-padding-64" id="contents">
     <h2><u>ABOUT</u></h2>
   <div class="w3-col s12 m12" style="text-align: justify; margin-left: 15%; margin-right: 15%; width:70%">
-    <p style="text-align: center;">SpeechTox is a WebApp made using HTML, CSS, JS and Django which integrates a Machine Learning model.<br><br>
+    <p style="text-align: center;">SpeechTox is an application which detects toxicity of words used in a content. It is developed using HTML, CSS, JS and Django, and integrates a Machine Learning model.<br><br>
         The machine learning model has been trained on the following Kaggle dataset: <a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge">https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge.</a> It is used to predict the following categories given any text: toxic, severe_toxic, obscene, threat, insult and identity_hate. The model is trained using Logistic Regression on the text after tokenising it using tf-idf.<br><br>
-        The WebApp uses this model for three applications:<br>
-        1)Given any text, it lists the categories that it fits.<br>
-        2)Given a song title and artist, it again displays the categories it fits.<br>
+        The application serves the following purposes:<br>
+        1)Given any text, it lists the categories of language content it fits in.<br>
+        2)Given a song title and artist, it again displays the categories of language content it fits in.<br>
         3)Given a billboard playlist and number of items, it classifies the songs in the playlist into two categories: decent and indecent.<br>
-        An additional feature that we will add is to display the censored lyrics of any song entered by the user.</p>
+    </p>
   </div>  
 {% endblock %}

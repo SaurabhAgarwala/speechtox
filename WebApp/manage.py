@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+                                                                                                                                                                                    #!/usr/bin/env python3
 import os
 import sys
 import re, string
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     def tokenize(s):
         return re_tok.sub(r' \1', s).split()
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "speechtox.settings")
-    try:
+    try:               
         from django.core.management import execute_from_command_line
     except ImportError:
         # The above import may fail for some other reason. Ensure that the
